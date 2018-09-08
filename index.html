@@ -4,11 +4,10 @@
 </head>
 <body>
 <?php
-//Para cargar el texto
-$texto = fopen("archivo.txt", "r");
-
-//Para mostrarlo
-echo nl2br($texto);
+$fp = fopen("archivo.txt", "r"); 
+$text = fread($fp, filesize("archivo.txt"); 
+//Para mostrarlo 
+echo nl2br($texto); 
 ?>
 
 <p><a href=”index.php”><?php print (“Volver al Home del sitio, escrito por PHP”); ?></a></p>
