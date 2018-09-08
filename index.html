@@ -5,12 +5,11 @@
 <body>
 <h1>Esto fue escrito estáticamente, en HTML</h1>
 <?php
-#ejemplode.com
-$archivo = file_get_contents("archivo.txt"); //Guardamos archivo.txt en $archivo
-$archivo = ucfirst($archivo); //Le damos un poco de formato
-$archivo = nl2br($archivo); //Transforma todos los saltos de linea en tag <br/>
-echo "<strong>archivo.txt:</strong> ";
-echo $archivo;
+//Para cargar el texto
+$texto = fopen("archivo.txt", "r");
+
+//Para mostrarlo
+echo nl2br($texto);
 ?>
 
 <p><a href=”index.php”><?php print (“Volver al Home del sitio, escrito por PHP”); ?></a></p>
