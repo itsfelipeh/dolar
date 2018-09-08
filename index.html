@@ -1,13 +1,14 @@
 <html>
 <head>
-<title>Dolari</title>
+<title>Dolar</title>
 </head>
 <body>
 <?php
-$fp = fopen("archivo.txt", "r"); 
-$text = fread($fp, filesize("archivo.txt"); 
-//Para mostrarlo 
-echo nl2br($texto); 
+
+$texto = file_get_contents("archivo.txt"); 
+$texto = nl2br($texto); 
+echo $texto
+
 ?>
 
 <p><a href=”index.php”><?php print (“Volver al Home del sitio, escrito por PHP”); ?></a></p>
